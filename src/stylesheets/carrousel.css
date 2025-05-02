@@ -1,0 +1,30 @@
+.carousel-container {
+    width: 96rem;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  
+.panel {
+    height: 30rem;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+    overflow: hidden; /* Esto hace que el border-radius funcione bien */
+}
+  
+.panel img {
+    width: 100%;
+    min-height: 100%;
+    
+    margin: 0rem;
+}
+
+.loading{
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+}
+  

@@ -1,0 +1,5 @@
+.mainLayout-footer{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 3rem;
+}

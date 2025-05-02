@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Futura Bold Condensed Oblique'; /* El nombre que usarás en tu CSS */
+    src: url('../fonts/FuturaBoldCondensedOblique.woff2') format('woff2'),
+         url('../fonts/FuturaBoldCondensedOblique.woff') format('woff');
+    font-weight: bold; /* Especifica el grosor */
+    font-style: oblique; /* Especifica el estilo */
+    /* Puedes añadir más propiedades como font-display para controlar la carga */
+  }
+
+.home{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.carrousel-tittle{
+    color: black;
+    font-family: 'Anton', sans-serif;
+    transform: skew(-10deg);
+}
+
+.featured-products{
+    margin-top: 60px;
+}
