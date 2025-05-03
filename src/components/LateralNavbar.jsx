@@ -1,12 +1,11 @@
 import React from "react";
 import "../stylesheets/lateral-navbar.css"
 import { useProductsTypes } from "../hooks/useProductsTypes.js";
-import { useState } from "react";
 
-const LateralNavbar = () =>{
+const LateralNavbar = ( {setSelectedProductTypeId} ) =>{
 
-    const { products_types, loading, error } = useProductsTypes(); //llamo el hook donde hago el fetch de products
-    const [click, setClick] = useState(null);
+    const { products_types, loading, error } = useProductsTypes(); //llamo el hook donde hago el fetch de products types
+    //const [click, setClick] = useState(null);
 
 
 
@@ -19,7 +18,7 @@ const LateralNavbar = () =>{
                 <ul>
                     {products_types.map((product_type) => (
                         <li key={product_type.id}>
-                            <button onClick={()=>setClick(product_type.id)}  className="btn-lat-navbar">{product_type.name}</button>
+                            <button onClick={()=>setSelectedProductTypeId(product_type.id)}  className="btn-lat-navbar">{product_type.name}</button>
                         </li>
                     ))}
                 </ul>
@@ -31,3 +30,12 @@ const LateralNavbar = () =>{
 
 
 export default LateralNavbar;
+
+
+//TODO: apunte para despues pasar a papel de como elevar un estado entre componentes padre e hijo(lift state up)
+//Crear un estado en el componente padre con useState, por ejemplo:
+//const [selectedProductTypeId, setSelectedProductTypeId] = useState(null);
+//Pasás la función setSelectedProductTypeId al componente hijo (LateralNavbar) como prop, así puede modificar ese estado cuando se hace clic
+//en un botón.
+//El componente padre conserva ese estado actualizado y se lo pasa a otro hijo (Products) para que lo use como filtro (.filter() o .map()
+//según necesites).
