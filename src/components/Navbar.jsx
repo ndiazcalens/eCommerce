@@ -2,9 +2,14 @@ import React from "react";
 import "../stylesheets/navbar.css"
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
+import { ProductsTypeIdContext } from '../context/productTypeContext.jsx'
+import { useContext } from "react";
+import { FaCartShopping } from "react-icons/fa6";
 
 function Navbar(){
-    
+
+    const { setSelectedProductTypeId } = useContext(ProductsTypeIdContext);
+
     return(
 
         <nav className="navbar">
@@ -25,18 +30,17 @@ function Navbar(){
                     </li>
                     <li className="nav-item">
                         <Link to ="/products">
-                            <button className="nav-btn">Productos</button>
+                            <button onClick={()=>setSelectedProductTypeId(null)} className="nav-btn">Productos</button>
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to = "/login">
+                            <button className="nav-btn">Iniciar sesión</button>
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link to = "/cart">
-                            <button className="nav-btn">Carrito</button>
-                        </Link>
-                    </li>
-                        
-                    <li className="nav-item">
-                        <Link to = "/login">
-                            <button className="nav-btn">Iniciar sesión</button>
+                            <button className="nav-btn"><FaCartShopping /></button>
                         </Link>
                     </li>
                 </ul>

@@ -1,0 +1,28 @@
+.login-page{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login-container{
+    height: 30rem;
+    min-width: 30%;
+    margin-top: 8rem;
+    background-color: rgb(255, 255, 255);
+    border: solid white;
+    border-radius: 0.3rem;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-tittle{
+    font-weight: 500;
+    font-family: inherit;
+    margin-bottom: 5rem;
+}

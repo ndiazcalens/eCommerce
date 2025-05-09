@@ -1,0 +1,139 @@
+.form {
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+  
+.input-wrapper {
+    position: relative;
+    margin: 1rem 0;
+}
+  
+.input-container {
+    padding: 0.8rem 0.5rem 0.4rem;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    color: black;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    outline: none;
+}
+  
+.input-container:focus {
+    border-color: rgb(126, 188, 121);
+}
+
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset !important;
+    -webkit-text-fill-color: black !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.floating-label {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.5rem;
+    color: #888;
+    font-size: 1em;
+    background-color: white;
+    padding: 0 0.2rem;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+  
+.input-container:focus + .floating-label,
+.input-container:not(:placeholder-shown) + .floating-label {
+    top: -0.6rem;
+    left: 0.4rem;
+    font-size: 0.75em;
+    color: rgb(126, 188, 121);
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9em;
+    color: #555;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 1rem;
+}
+  
+.custom-checkbox input {
+    display: none; /* ocultamos el checkbox real */
+
+}
+  
+.custom-checkbox .checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    background-color: white;
+    position: relative;
+    transition: all 0.2s ease;
+}
+  
+  /* sombra al hacer hover */
+.custom-checkbox:hover .checkmark {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+  
+  /* fondo verde cuando está marcado */
+.custom-checkbox input:checked + .checkmark {
+    background-color: rgb(126, 188, 121);
+    border-color: rgb(126, 188, 121);
+}
+  
+  /* tilde animada */
+.custom-checkbox input:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: scale(0) rotate(45deg);
+    animation: checkmarkPop 0.2s ease forwards;
+}
+  
+  /* animación del check */
+@keyframes checkmarkPop {
+    to {
+      transform: scale(1) rotate(45deg);
+    }
+}
+  
+  
+
+
+.submit-btn{
+    padding: 0.6rem 0.6rem 0.6rem;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    color: white;
+    background-color: rgb(126, 188, 121);
+    border: 1px solid rgb(125, 188, 121);
+    border-radius: 0.6rem;
+    outline: none;
+}
+
+.submit-btn:hover{
+    cursor: pointer;
+}
+
+.submit-btn:active{
+    transform: translateY(2px);
+}

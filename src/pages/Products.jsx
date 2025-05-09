@@ -3,26 +3,25 @@ import { useProducts } from "../hooks/useProducts";
 import LateralNavbar from "../components/LateralNavBar";
 import Product from "../components/Product"
 import "../stylesheets/products.css"
-import { useState } from "react";
-import { useProductsTypes } from "../hooks/useProductsTypes.js";
-
+import { useContext } from "react";
+import { ProductsTypeIdContext } from '../context/productTypeContext.jsx'
 
 const Products = () => {
     const { products, loading, error } = useProducts(); //llamo el hook donde hago el fetch de products
-    const { products_types } = useProductsTypes(); //llamo el hook donde hago el fetch de products types
-    const [ selectedProductTypeID, setSelectedProductTypeId ] = useState(null);
+    
+    const { selectedProductTypeId, setSelectedProductTypeId } = useContext(ProductsTypeIdContext);
+    // si tengo que leer el valor, llamo a selectedProductTypeId, si lo tengo que actualizar setSelectedProductTypeId
   
     if (loading == true) return <div className="loading">Cargando..</div>;
     if (error) return <div>Error: {error}</div>; 
 
     //condición ? valorSiEsVerdadero : valorSiEsFalso;
+    //si selectedProductTypeId es verdadero(no es null o undefined), se ejecuta lo de la izq
 
-    //const filteredProducts = products_type 
-  //? products.filter((p) => p.products_type.id === products_type.id) 
-  //: products;
+    const filteredProducts = selectedProductTypeId
+    ?  products.filter((p) => p.product_type_id === selectedProductTypeId)
+    : products;
 
-
-  // intentar forma de que directamente filtro los productos segun su type id directamente desde las props en vez de hacer un filter
 
     return(
         <>
@@ -38,74 +37,9 @@ const Products = () => {
                             price= {product.price}
                             />
                         ))
-                        };
+                        }
                     </div>
-                    <Product
-                    key= {products[0].id}
-                    image= {products[0].image_url}
-                    name = {products[0].name}
-                    price = {products[0].price}
-                    />
-                    <Product
-                    //key= {products[0].id}
-                    image= {products[0].image_url}
-                    name = {products[0].name}
-                    price = {products[0].price}
-                    />
-                    <Product
-                    //key= {products[0].id}
-                    image= {products[0].image_url}
-                    name = {products[0].name}
-                    price = {products[0].price}
-                    />
-                    <Product
-                   // key= {products[0].id}
-                    image= {products[0].image_url}
-                    name = {products[0].name}
-                    price = {products[0].price}
-                    />
-                    <Product
-                   // key= {products[0].id}
-                    image= {products[0].image_url}
-                    name = {products[0].name}
-                    price = {products[0].price}
-                    />
-                    <Product
-                   // key= {products[0].id}
-                    image= {products[0].image_url}
-                    name = {products[0].name}
-                    price = {products[0].price}
-                    />
-                    <Product
-                   // key= {products[0].id}
-                    image= {products[0].image_url}
-                    name = {products[0].name}
-                    price = {products[0].price}
-                    />
-                    <Product
-                   // key= {products[0].id}
-                    image= {products[0].image_url}
-                    name = {products[0].name}
-                    price = {products[0].price}
-                    />
-                    <Product
-                    //key= {products[0].id}
-                    image= {products[0].image_url}
-                    name = {products[0].name}
-                    price = {products[0].price}
-                    />
-                    <Product
-                    //key= {products[0].id}
-                    image= {products[0].image_url}
-                    name = {products[0].name}
-                    price = {products[0].price}
-                    />
-                    <Product
-                   // key= {products[0].id}
-                    image= {products[0].image_url}
-                    name = {products[0].name}
-                    price = {products[0].price}
-                    />
+                    
                 </div>    
             </div>
         </>
