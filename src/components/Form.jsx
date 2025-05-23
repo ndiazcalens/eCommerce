@@ -5,7 +5,7 @@ import '../stylesheets/form.css';
 
 
 
-export const From = () => {
+export const Form = () => {
     const [username, setUsername] = useState("");
 
     const [password, setPassword] = useState("");

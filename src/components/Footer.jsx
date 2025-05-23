@@ -6,7 +6,7 @@ function Footer(){
         <>
             <div className="footer-footer">
                 <div className="footer-name">materos</div>
-                <div>2025 c </div> {/*fijarse en el portfolio como hacer esto mas lindo */}
+                <div>2025 © </div> {/*fijarse en el portfolio como hacer esto mas lindo */}
             </div>
         </>
     )

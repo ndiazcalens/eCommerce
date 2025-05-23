@@ -5,6 +5,7 @@ import Product from "../components/Product"
 import "../stylesheets/products.css"
 import { useContext } from "react";
 import { ProductsTypeIdContext } from '../context/productTypeContext.jsx'
+import Cart from "./Cart.jsx";
 
 const Products = () => {
     const { products, loading, error } = useProducts(); //llamo el hook donde hago el fetch de products
@@ -25,7 +26,9 @@ const Products = () => {
 
     return(
         <>
+            <Cart />
             <div className="products-page" >
+                
                 <LateralNavbar setSelectedProductTypeId={setSelectedProductTypeId} />
                 <div className="all-products">
                     <div>

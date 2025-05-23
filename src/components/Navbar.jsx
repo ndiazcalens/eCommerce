@@ -4,7 +4,6 @@ import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import { ProductsTypeIdContext } from '../context/productTypeContext.jsx'
 import { useContext } from "react";
-import { FaCartShopping } from "react-icons/fa6";
 
 function Navbar(){
 
@@ -19,7 +18,7 @@ function Navbar(){
                 </Link>
             </div>
                 <Link to="/">
-                    <p className="main-tittle">materos</p>
+                    <p className="main-tittle">ConRitmoDeMate</p>
                 </Link>
             <div className="navlist-container">
                 <ul className="nav-list">
@@ -36,11 +35,6 @@ function Navbar(){
                     <li className="nav-item">
                         <Link to = "/login">
                             <button className="nav-btn">Iniciar sesión</button>
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to = "/cart">
-                            <button className="nav-btn"><FaCartShopping /></button>
                         </Link>
                     </li>
                 </ul>

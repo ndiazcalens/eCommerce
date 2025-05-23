@@ -26,3 +26,27 @@
 .featured-products{
     margin-top: 60px;
 }
+
+.home-products{
+    color: black;
+    border-radius: 8px;
+    border: 1px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+.slogan{
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.line {  /* Elimina el borde por defecto que le dan los navegadores */ 
+    border-bottom: 1rem solid black;/* Crea una línea superior sólida de 2px de grosor y negra */
+    width: 95%; 
+}

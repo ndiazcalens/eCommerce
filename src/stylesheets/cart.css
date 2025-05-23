@@ -1,0 +1,65 @@
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%); /* Oculto fuera de la pantalla */
+  transition: transform 0.3s ease-in-out;
+  z-index: 9999; /* Asegura que esté arriba de todo */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+/* Cuando el checkbox está marcado, se muestra */
+.cart-page input:checked ~ .cart {
+  transform: translateX(0); /* Entra desde la derecha */
+}
+
+.cart-page input:checked ~ .cart-btn {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out; /* se esconde rápido sin delay */
+}
+
+.cart-btn {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out 0.3s; /* aparece con delay */
+    cursor: pointer;
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 10000; /* Encima del carrito */
+    background-color: white;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+.back-btn {
+    cursor: pointer;
+    position: fixed;
+    margin-top: 50px;
+    right: 20px;
+    z-index: 10000; /* Encima del boton */
+    padding: 10px; 
+}
+
+.cart-tittle{
+  margin-top: 4rem;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.line {
+  border: none; /* Elimina el borde por defecto que le dan los navegadores */
+  border-top: 2px solid black; /* Crea una línea superior sólida de 2px de grosor y negra */ 
+}
