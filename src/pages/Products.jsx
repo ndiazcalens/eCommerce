@@ -1,6 +1,6 @@
 import React from "react";
 import { useProducts } from "../hooks/useProducts";
-import LateralNavbar from "../components/LateralNavBar";
+import LateralNavbar from "../components/LateralNavbar";
 import Product from "../components/Product"
 import "../stylesheets/products.css"
 import { useContext } from "react";
