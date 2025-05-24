@@ -29,7 +29,9 @@ body {
   border: 0px;
   padding: 0%;
   margin: 0;
-  background-color: rgb(238, 238, 238);
+  /*background-color: rgb(238, 238, 238);*/
+  background: url('/public/images/fondo_textura_madera2.png') no-repeat center center;
+  background-size: cover;
   align-items: flex-start;
   justify-content: center;
   min-width: 320px;

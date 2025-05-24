@@ -1,12 +1,14 @@
 .product-container{
+    border: solid rgb(255, 255, 255);
     border-radius: 0.3rem;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     max-width: 15rem;
     background-color: rgb(255, 255, 255);
     margin: 0.5rem;
-    box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     cursor: pointer;
+    
 }
 
 
@@ -14,6 +16,7 @@
     box-shadow: 0 -0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),  /* arriba */
                 0  0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);  /* abajo */
     transition: box-shadow .2s ease-in-out;
+    transform: translateY(-5px);
 }
 
 

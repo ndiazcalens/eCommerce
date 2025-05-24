@@ -8,14 +8,16 @@ import yerba_montania from "/images/yerbas/yerba_montania.jpg";
 import "../stylesheets/carrousel.css";
 import { AutoPlay } from "@egjs/flicking-plugins";
 import { useProducts } from "../hooks/useProducts";
+import Product from "../components/Product"
 
 
 
 const Carousel = () => {
 
+
   const { products, loading, error } = useProducts(); //llamo el hook donde hago el fetch de products
 
-  const plugins = useRef([new AutoPlay({ duration: 100, direction: "NEXT", stopOnHover: true })]);
+  const plugins = useRef([new AutoPlay({ duration: 100000000, direction: "NEXT", stopOnHover: true })]);
 
   if (loading == true) return <div className="loading">Cargando..</div>;
   if (error) return <div>Error: {error}</div>;
@@ -31,27 +33,17 @@ const Carousel = () => {
       >
       {/*TODO:poner el resto de los productos cuando haya armado la manera de cargar los productos manualmente desde la pagina*/}
 
-        <div className="panel">
-          <img src={products[0]?.image_url} 
-          alt="Bombillon alpaca_bronce"
-          key={products[0]?.id}/>
+      {products.slice(0, 6).map((product) => (
+        <div className="panel" key={product.id}>
+          <Product
+            image={product.image_url}
+            name={product.name}
+            price={product.price}
+          />
+          
         </div>
-        <div className="panel">
-          <img src={combo_matero1} 
-          alt="Combo matero 1"/>
-        </div>
-        <div className="panel">
-          <img src={mate_torpedo} 
-          alt="Mate torpedo" />
-        </div>
-        <div className="panel">
-          <img src={mate_armado} 
-          alt="Mate armado" />
-        </div>
-        <div className="panel">
-          <img src={yerba_montania} 
-          alt="Montaña de yerba" />
-        </div>
+        ))}
+
       </Flicking>
     </div>
   );

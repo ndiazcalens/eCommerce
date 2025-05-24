@@ -1,15 +1,20 @@
 .products-page{
     display: flex;
-    margin-top: 100px;
-    background-color: rgb(238, 238, 238);
+    background: url('/public/images/fondo_textura_madera2.png') no-repeat center center;
+    padding-top: 100px;
 }
 
 
-.all-products{
-    display: grid;
-    grid-template-columns: 4fr 4fr 4fr 4fr;
-    gap: 0.2rem;
-    width: 100%;
-    margin:0px;
-    padding:0px;
+
+
+/*.all-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.5rem;
+  width: 100%;
+  justify-items: center;
+}*/
+
+.all-products {
+  column-count: 4;              /* cantidad de columnas */             /* espacio entre columnas */
 }

@@ -31,19 +31,17 @@ const Products = () => {
                 
                 <LateralNavbar setSelectedProductTypeId={setSelectedProductTypeId} />
                 <div className="all-products">
-                    <div>
-                        {filteredProducts.map((product)=>(
-                            <Product
-                            key={product.id}
-                            image= {product.image_url}
-                            name= {product.name}
-                            price= {product.price}
-                            />
+                    {filteredProducts.map((product)=>(
+                        <Product
+                        key={product.id}
+                        image= {product.image_url}
+                        name= {product.name}                            
+                        price= {product.price}
+                        />
                         ))
-                        }
-                    </div>
-                    
-                </div>    
+                        } 
+                </div>
+   
             </div>
         </>
     );
