@@ -6,20 +6,20 @@
   
 .panel {
     height: 30rem;
-    width: 30rem;
+    width: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-   
     overflow: hidden; /* Esto hace que el border-radius funcione bien */
 }
   
 .panel img {
-    width: 100%;
+    width: 20rem;
     height: 20rem;
+    object-fit: cover;
     margin: 0rem;
 }
+
 
 
 .loading{
