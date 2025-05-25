@@ -17,7 +17,7 @@ const Carousel = () => {
 
   const { products, loading, error } = useProducts(); //llamo el hook donde hago el fetch de products
 
-  const plugins = useRef([new AutoPlay({ duration: 100, direction: "NEXT", stopOnHover: true })]);
+  const plugins = useRef([new AutoPlay({ duration: 350, direction: "NEXT", stopOnHover: true })]);
 
   if (loading == true) return <div className="loading">Cargando..</div>;
   if (error) return <div>Error: {error}</div>;
