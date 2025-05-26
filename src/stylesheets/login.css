@@ -26,3 +26,9 @@
     font-family: inherit;
     margin-bottom: 5rem;
 }
+
+@media (max-width: 768px) {
+    .login-container{
+        width: 20rem;
+    }
+}

@@ -30,7 +30,7 @@ body {
   padding: 0%;
   margin: 0;
   /*background-color: rgb(238, 238, 238);*/
-  background: url('/public/images/fondo_textura_madera2.png') no-repeat center center;
+  background: url('/images/fondo_textura_madera2.png') no-repeat center center;
   background-size: cover;
   align-items: flex-start;
   justify-content: center;

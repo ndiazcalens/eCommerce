@@ -17,14 +17,13 @@
 
 
 
-.carrousel-tittle{
-    color: black;
-    font-family: 'Anton', sans-serif;
-    transform: skew(-10deg);
-}
+
 
 .featured-products{
-    margin-top: 60px;
+    margin-top: 80px;
+    margin-left: 100px;
+    width: 200vh;
+    
 }
 
 .home-products{
@@ -49,4 +48,17 @@
 .line {  /* Elimina el borde por defecto que le dan los navegadores */ 
     border-bottom: 1rem solid black;/* Crea una línea superior sólida de 2px de grosor y negra */
     width: 95%; 
+}
+
+@media (max-width: 768px){
+    .featured-products{
+        margin-top: 60px;
+        padding-right: 5rem;
+        width: 50%;
+    }
+
+    .home{
+        margin-top: 2rem;
+        width: 100%;
+    }
 }

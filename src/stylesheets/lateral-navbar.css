@@ -14,8 +14,17 @@
     transform: translateY(2px);
 }
 
-
-
 .lateral-navbar{
     list-style: none;
+}
+
+@media(max-width: 768px){
+    .lateral-navbar{
+        width: 5rem;
+        margin-right: 1rem;
+    }
+
+    ul{
+        padding-left: 0;
+    }
 }

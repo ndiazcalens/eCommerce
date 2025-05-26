@@ -17,7 +17,7 @@ function Home(){
                     <Carousel />
                 </div>
                 <Link to ="/products">
-                    <button onClick={()=>setSelectedProductTypeId(null)} className="home-products">Conoce todos nuestros productos</button>
+                    <button className="home-products">Conoce todos nuestros productos</button>
                 </Link>
                 <div className="line"></div>
                 <div className="slogan">"El mate que te acompaña todos los dias, Con Ritmo De Mate"</div>

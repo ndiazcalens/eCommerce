@@ -67,3 +67,82 @@ ul{
 .nav-btn:active{
     transform: translateY(2px);
 }
+
+
+/*boton hamburguesa (solo visible en pantallas chicas) */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+@media ( max-width: 768px) {
+    
+  .navlist-container {
+    position: absolute;
+    top: 60px; /* misma altura que tu navbar */
+    left: 0;
+    margin-top: 0;
+    padding-top: 0;
+    
+    background-color: rgb(126, 188, 121);
+    flex-direction: column;
+    align-items: center;
+    display: none; /* oculto por defecto */
+    z-index: 999; /* asegurate que esté encima */
+    padding: 1rem 0;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* opcional */
+    right: 0;         /* alineado al lado derecho */
+    left: auto;       /* anula el left anterior si lo tenías */
+    width: 20%;
+  }
+
+  .navlist-container.open {
+    display: flex;
+    align-items: center;
+    width: 15rem;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    
+  }
+
+  .nav-list {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .nav-item{
+    justify-content: center;
+  }
+
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .hamburger {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3rem;
+    margin-left: 25rem;
+    position: fixed;
+  }
+
+  .navbar{
+    display: flex;
+    width: 100%;
+    padding: 0 0.5rem; /* Tienes 0.5rem de padding en cada lado */
+    box-sizing: border-box;
+  }
+
+ 
+}

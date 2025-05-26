@@ -15,7 +15,6 @@ const LateralNavbar = () =>{
     if (loading == true) return <div className="loading">Cargando..</div>;
     if (error) return <div>Error: {error}</div>;
     return (
-        <div>
             <div className="lateral-navbar">
                 <ul>
                     <li>
@@ -28,7 +27,7 @@ const LateralNavbar = () =>{
                     ))}
                 </ul>
             </div>
-        </div>
+        
         
     )
 }
