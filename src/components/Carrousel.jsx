@@ -12,7 +12,7 @@ const Carousel = () => {
 
   const { products, loading, error } = useProducts(); //llamo el hook donde hago el fetch de products
 
-  const plugins = useRef([new AutoPlay({ duration: 300, direction: "NEXT", stopOnHover: true })]);
+  const plugins = useRef([new AutoPlay({ duration: 4000, direction: "NEXT", stopOnHover: true })]);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {

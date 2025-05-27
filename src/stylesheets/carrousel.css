@@ -38,37 +38,49 @@
 
 
 @media(max-width: 768px) {
-  .carousel-container {
-    width: 100%;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
+.carousel-container {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box; 
+    }
 
-  .flicking-viewport {
-    height: auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-  }
+    /* El flicking-viewport es generado por la librería */
+    .flicking-viewport {
+        height: auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-  .panel {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    text-align: center;
-    overflow: hidden;
-  }
+    .panel {
 
-  .panel > .product-container {
-    display: inline-block;
-    width: auto;
-    max-width: 90vw;
-    margin: 0 auto;
-  }
+        width: calc(100vw - 2rem - 1rem); 
+        height: auto; 
+        margin-right: 1rem; 
+        
+        /* El panel es flex para centrar su contenido (el Product) */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+        
+        overflow: hidden;
+        box-sizing: border-box;
+        scroll-snap-align: center; 
+    }
 
-  .panel img {
-    width: 100%;
-    height: auto;
-  }
+    .panel:last-child {
+        margin-right: 0;
+    }
+
+    /* Product Container dentro del Panel (sin tocar product.css) */
+    .panel > .product-container {
+        width: auto; 
+        max-width: 100%; 
+ 
+    }
+
+    .panel img {
+        width: 100%;
+        height: auto;
+    }
 }
