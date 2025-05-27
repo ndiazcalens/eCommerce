@@ -5,7 +5,7 @@ import "../stylesheets/login.css";
 function Login (){
     return (
         <>  
-            <Cart />
+            
             <div className="login-page">
                 <div className="login-container">
                     <h2 className="login-tittle">Iniciar sesión</h2>

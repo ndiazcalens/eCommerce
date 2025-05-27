@@ -15,10 +15,6 @@
     align-items: center;
 }
 
-
-
-
-
 .featured-products{
     margin-top: 80px;
     margin-left: 100px;
@@ -46,7 +42,8 @@
 }
 
 .line {  /* Elimina el borde por defecto que le dan los navegadores */ 
-    border-bottom: 1rem solid black;/* Crea una línea superior sólida de 2px de grosor y negra */
+    border-bottom: 0.3rem solid black;/* Crea una línea superior sólida de 2px de grosor y negra */
+    border-radius: 2rem;
     width: 95%; 
 }
 
@@ -60,5 +57,9 @@
     .home{
         margin-top: 2rem;
         width: 100%;
+    }
+
+    .slogan{
+        margin-left: 0.5rem;
     }
 }

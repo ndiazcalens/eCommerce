@@ -1,7 +1,7 @@
 import React from "react";
 import "../stylesheets/home.css";
 import Carousel from "../components/Carrousel";
-import Cart from "./Cart.jsx";
+
 import { Link } from "react-router-dom";
 
 
@@ -11,7 +11,7 @@ function Home(){
 
     return(
         <>
-            <Cart />
+            
             <div className="home">
                 <div className="featured-products">
                     <Carousel />

@@ -64,3 +64,10 @@
   border: none; /* Elimina el borde por defecto que le dan los navegadores */
   border-top: 2px solid black; /* Crea una línea superior sólida de 2px de grosor y negra */ 
 }
+
+
+@media(max-width: 768px){
+  .cart-btn{
+    z-index: 1;
+  }
+}
