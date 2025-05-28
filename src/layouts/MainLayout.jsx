@@ -10,15 +10,17 @@ import { ProductsTypeIdProvider } from '../context/productTypeContext.jsx'
 function MainLayout (){
     return(
         <>
-            <ProductsTypeIdProvider>
-                <Navbar />
-                <Cart />
-                <main>
-                    <Outlet /> {/* aca se renderiza la página específica según la ruta */}
-                </main>
-            </ProductsTypeIdProvider>
-            <div className='mainLayout-footer'>
-                <Footer/>
+            <div className="mainPage-container">
+                <ProductsTypeIdProvider>
+                    <Navbar />
+                    <Cart />
+                    <main className="mainContent-container">
+                        <Outlet /> {/* aca se renderiza la página específica según la ruta */}
+                    </main>
+                </ProductsTypeIdProvider>
+                <div className='mainLayout-footer'>
+                    <Footer/>
+                </div>
             </div>
         </>
 

@@ -1,7 +1,20 @@
+.mainPage-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+.mainContent-container{
+    flex: 1;
+}
+
+
 .mainLayout-footer{
     display: flex;
     align-items: flex-end;
-    margin-top: 3rem;
-    
+    margin-top: 7rem;
+    transform: translateY(0); 
 }
 
